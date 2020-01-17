@@ -144,7 +144,7 @@ function processProduct(num1, num2, cb) {
 */
 function processContains(item, list, cb) {
   /* CODE HERE */
-  
+  return cb(list.includes(item));
 }
 
 /**
@@ -188,8 +188,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  return runners.map(arrItem => `${arrItem.last_name}, ${arrItem.first_name}`);
+  // return runners.forEach(arrItem => console.log(`${arrItem.last_name}, ${arrItem.first_name}`));
+
+  //As seen above, I tried to do it using forEach, but for some reason, it would not pass me.  I definitely would like help to know what was wrong.
 }
 
 /**
@@ -204,8 +208,9 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
+  return runners.map(arrItem => `${arrItem.first_name}`.toUpperCase());
 }
 
 /**
@@ -221,8 +226,9 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
+  return runners.filter(arrItem => arrItem.shirt_size === tShirtSize)
 }
 
 /**

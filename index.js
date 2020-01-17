@@ -118,7 +118,8 @@ function processSum(numberList, cb) {
 */
 function processProduct(num1, num2, cb) {
   /* CODE HERE */
-  
+  const product = num1 * num2;
+  return cb(product);
 }
 
 /**
@@ -141,8 +142,9 @@ function processProduct(num1, num2, cb) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(item, list, cb) {
   /* CODE HERE */
+  
 }
 
 /**
